@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | MySocial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="applyTheme()">
+  <header class="topbar">
+    <div class="logo">MySocial</div>
+    <button onclick="toggleTheme()">🌓</button>
+    <button onclick="logoutUser()">🚪</button>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-info card">
+      <h2 id="profile-name"></h2>
+      <p><strong>Followers:</strong> <span id="follower-count">0</span></p>
+      <button onclick="toggleFollow()">Follow / Unfollow</button>
+    </section>
+    <section id="my-posts" class="post-grid"></section>
+  </main>
+
+  <script src="db.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

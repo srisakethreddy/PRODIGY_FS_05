@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - MySocial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+  <div class="login-container card">
+    <h1>Welcome to MySocial</h1>
+    <p>Please enter your username to continue</p>
+    <input type="text" id="username" placeholder="Your username" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Please enter a username.");
+        return;
+      }
+      localStorage.setItem("currentUser", username);
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
